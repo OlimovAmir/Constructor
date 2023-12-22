@@ -30,7 +30,10 @@ namespace Constructor
             _birthday=student._birthday;
                         
         }
-
+        public void SetLastName(string lastName)
+        {
+            _lastName = lastName;
+        }
         private string _firstName;
         private string _middleName;
         private string _lastName;
@@ -38,7 +41,7 @@ namespace Constructor
 
         public void Print()
         {
-            Console.WriteLine($"");
+            Console.WriteLine($"Name: {_firstName}\nLastName: {_lastName}\nMiddleName: {_middleName}\nbirthday: {_birthday} ");
         }
 
     }
