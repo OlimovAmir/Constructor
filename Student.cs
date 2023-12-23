@@ -10,38 +10,36 @@ namespace Constructor
     {
         public Student(string lastName, DateTime birthday)
         {
-            _lastName = lastName;
-            _birthday = birthday;
+            this.lastName = lastName;
+            this.birthday = birthday;
         }
 
-        public Student(string lastName, string firstName, string middleName ,DateTime birthday)
+        public Student(string lastName, string firstName, string middleName ,DateTime birthday):this(lastName, birthday)
         {
-            _lastName=lastName;
             _firstName=firstName;
             _middleName=middleName;
-            _birthday=birthday;
         }
 
         public Student(Student student)
         {
             _firstName = student._firstName;
             _middleName = student._middleName;
-            _lastName = student._lastName;
-            _birthday=student._birthday;
+            lastName = student.lastName;
+            birthday=student.birthday;
                         
         }
         public void SetLastName(string lastName)
         {
-            _lastName = lastName;
+            this.lastName = lastName;
         }
         private string _firstName;
         private string _middleName;
-        private string _lastName;
-        private DateTime _birthday;
+        private string lastName;
+        private DateTime birthday;
 
         public void Print()
         {
-            Console.WriteLine($"Name: {_firstName}\nLastName: {_lastName}\nMiddleName: {_middleName}\nbirthday: {_birthday} ");
+            Console.WriteLine($"Name: {_firstName}\nLastName: {lastName}\nMiddleName: {_middleName}\nbirthday: {birthday} ");
         }
 
     }
